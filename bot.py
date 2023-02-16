@@ -29,37 +29,11 @@ async def on_message(message):
         await message.channel.send('Olá!')
 
     if message.content.lower() == '!source':
-            await message.channel.send('Meu codigo fonte esta em: https://github.com/JorasOliveira/NLP_discordBot')
+            await message.channel.send('Ola, meu codigo fonte esta em: https://github.com/JorasOliveira/NLP_discordBot')
 
     if message.content.lower() == '!author':
             await message.channel.send('Meu autor eh o Jorás, o email dele eh: jorascco@al.insper.edu.br')
 
-    #TODO - fazer isso funcionar direito
-    if message.content.lower() == '!shrek':
-            await message.channel.send('⢀⡴⠑⡄⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣀')
-            await message.channel.send('⠸⡇⠀⠿⡀⠀⠀⠀⣀⡴⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀')
-            await message.channel.send('    ⠑⢄⣠⠾⠁⣀⣄⡈⠙⣿⣿⣿⣿⣿⣿⣿⣿⣆             ')
-            await message.channel.send('        ⠁⠀⠀⠈⠙⠛⠂⠈⣿⣿⣿⣿⣿⠿⡿⢿⣆            ')
-            await message.channel.send('     ⢀⡾⣁⣀⠀⠴⠂⠙⣗⡀⠀⢻⣿⣿⠭⢤⣴⣦⣤⣹⠀⠀⠀⢀⢴⣶⣆')
-            await message.channel.send('    ⢀⣾⣿⣿⣿⣷⣮⣽⣾⣿⣥⣴⣿⣿⡿⢂⠔⢚⡿⢿⣿⣦⣴⣾⠁⠸⣼⡿ ')
-            await message.channel.send('   ⢀⡞⠁⠙⠻⠿⠟⠉⠀⠛⢹⣿⣿⣿⣿⣿⣌⢤⣼⣿⣾⣿⡟⠉⠀⠀⠀⠀⠀  ')
-            await message.channel.send('   ⣾⣷⣶⠇⠀⠀⣤⣄⣀⡀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ ')
-            await message.channel.send('   ⠉⠈⠉⠀⠀⢦⡈⢻⣿⣿⣿⣶⣶⣶⣶⣤⣽⡹⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ ')
-            await message.channel.send('           ⠉⠲⣽⡻⢿⣿⣿⣿⣿⣿⣿⣷⣜⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀') 
-            await message.channel.send('           ⢸⣿⣿⣷⣶⣮⣭⣽⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀ ')
-            await message.channel.send('          ⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀ ')
-            await message.channel.send('       ⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀')
-            await message.channel.send('        ⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀') 
-            await message.channel.send('          ⠉⠛⠻⠿⠿⠿⠿⠛⠉              ')
 
-    #the command !bee sends the entire bee movie script, word for word in chat
-    #because of message size limitations, i have to send one word 
-    #at a time, this might be awfull, but im laughing too much to change it
-    if message.content.lower() == '!bee':
-
-        with open('bee.txt', 'r') as file:
-            for l in file:
-                for word in l.split():
-                    await message.channel.send(word)
 
 client.run(dcToken.apiToken)
