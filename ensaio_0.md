@@ -1,0 +1,1 @@
+A criacao do bot foi bem tranquila, o tutorial tinha quase tudo que eu precisava, e me diverti umpouco tentando crirar uns comandos extras, para manter limpo, movi os comandos extras para a branch 'shenanigans'. De fontes, consultei apenas o repositorio da disciplina, nao tive necessidade ainda de ler a documentacao do discord a fundo. 
