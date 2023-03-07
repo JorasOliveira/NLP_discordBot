@@ -1,0 +1,689 @@
+[2023-02-16 18:39:39] [INFO    ] discord.client: logging in using static token
+[2023-02-16 18:39:40] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b6f3a535d4ce7d7e7c3c58d8f2fbff26).
+MTA3NDc1ODgwMzU0NDg3NTAzOA.GPBr7A.dPggd5RySNWkA_fi-0ewJ4w8nJnDihJuMKVr7c
+[2023-02-16 18:45:34] [INFO    ] discord.client: logging in using static token
+[2023-02-16 18:45:35] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 52290ef0806c6b8d6244a8e37f668b62).
+[2023-02-16 19:07:34] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-16 19:56:58] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-16 20:18:45] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-16 22:49:34] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 00:05:22] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 00:13:06] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 02:36:42] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 03:44:08] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 05:14:36] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 05:55:11] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 06:48:50] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 08:41:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 10:27:02] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 11:08:55] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 12:29:06] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 13:26:33] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-17 16:35:24] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 52290ef0806c6b8d6244a8e37f668b62.
+[2023-02-23 16:32:44] [INFO    ] discord.client: logging in using static token
+[2023-02-23 16:32:44] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4b9c1053a13165a258aa141e69748534).
+[2023-02-23 17:48:25] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4b9c1053a13165a258aa141e69748534.
+[2023-02-23 19:46:51] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4b9c1053a13165a258aa141e69748534.
+[2023-02-23 23:18:49] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4b9c1053a13165a258aa141e69748534.
+[2023-02-24 00:10:19] [ERROR   ] discord.client: Attempting a reconnect in 0.55s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:11:19] [ERROR   ] discord.client: Attempting a reconnect in 3.92s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:12:23] [ERROR   ] discord.client: Attempting a reconnect in 0.79s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:13:24] [ERROR   ] discord.client: Attempting a reconnect in 5.15s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:14:30] [ERROR   ] discord.client: Attempting a reconnect in 12.34s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:15:42] [ERROR   ] discord.client: Attempting a reconnect in 29.64s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:17:12] [ERROR   ] discord.client: Attempting a reconnect in 34.26s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:18:46] [ERROR   ] discord.client: Attempting a reconnect in 68.80s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:20:55] [ERROR   ] discord.client: Attempting a reconnect in 134.92s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:24:10] [ERROR   ] discord.client: Attempting a reconnect in 833.69s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:39:04] [ERROR   ] discord.client: Attempting a reconnect in 627.24s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 00:50:31] [ERROR   ] discord.client: Attempting a reconnect in 965.39s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 01:07:36] [ERROR   ] discord.client: Attempting a reconnect in 191.76s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 01:11:48] [ERROR   ] discord.client: Attempting a reconnect in 278.71s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 01:17:27] [ERROR   ] discord.client: Attempting a reconnect in 338.88s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 01:24:06] [ERROR   ] discord.client: Attempting a reconnect in 855.64s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 01:39:22] [ERROR   ] discord.client: Attempting a reconnect in 80.82s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 01:41:43] [ERROR   ] discord.client: Attempting a reconnect in 143.36s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 01:45:06] [ERROR   ] discord.client: Attempting a reconnect in 890.75s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 02:00:57] [ERROR   ] discord.client: Attempting a reconnect in 668.23s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 02:13:05] [ERROR   ] discord.client: Attempting a reconnect in 896.54s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 02:29:02] [ERROR   ] discord.client: Attempting a reconnect in 396.11s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 02:36:38] [ERROR   ] discord.client: Attempting a reconnect in 6.74s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 02:37:45] [ERROR   ] discord.client: Attempting a reconnect in 347.46s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 02:44:33] [ERROR   ] discord.client: Attempting a reconnect in 367.47s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 02:51:40] [ERROR   ] discord.client: Attempting a reconnect in 422.21s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 02:59:43] [ERROR   ] discord.client: Attempting a reconnect in 874.13s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 03:15:17] [ERROR   ] discord.client: Attempting a reconnect in 440.07s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 03:23:37] [ERROR   ] discord.client: Attempting a reconnect in 267.67s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 03:29:05] [ERROR   ] discord.client: Attempting a reconnect in 551.83s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 03:39:17] [ERROR   ] discord.client: Attempting a reconnect in 952.81s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 03:56:10] [ERROR   ] discord.client: Attempting a reconnect in 537.76s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 04:06:08] [ERROR   ] discord.client: Attempting a reconnect in 444.34s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 04:14:32] [ERROR   ] discord.client: Attempting a reconnect in 542.38s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 04:24:34] [ERROR   ] discord.client: Attempting a reconnect in 312.25s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 04:30:47] [ERROR   ] discord.client: Attempting a reconnect in 557.75s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 04:41:05] [ERROR   ] discord.client: Attempting a reconnect in 527.44s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 04:50:52] [ERROR   ] discord.client: Attempting a reconnect in 482.83s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 04:59:55] [ERROR   ] discord.client: Attempting a reconnect in 386.35s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 05:07:22] [ERROR   ] discord.client: Attempting a reconnect in 441.40s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 05:15:43] [ERROR   ] discord.client: Attempting a reconnect in 347.68s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 05:22:31] [ERROR   ] discord.client: Attempting a reconnect in 10.31s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 05:23:41] [ERROR   ] discord.client: Attempting a reconnect in 86.19s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 05:26:08] [ERROR   ] discord.client: Attempting a reconnect in 481.00s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 05:35:09] [ERROR   ] discord.client: Attempting a reconnect in 608.02s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 05:46:17] [ERROR   ] discord.client: Attempting a reconnect in 403.41s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 05:54:00] [ERROR   ] discord.client: Attempting a reconnect in 992.55s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 06:11:33] [ERROR   ] discord.client: Attempting a reconnect in 354.15s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 06:18:27] [ERROR   ] discord.client: Attempting a reconnect in 518.49s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 06:28:06] [ERROR   ] discord.client: Attempting a reconnect in 862.49s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 06:43:28] [ERROR   ] discord.client: Attempting a reconnect in 554.00s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 06:53:42] [ERROR   ] discord.client: Attempting a reconnect in 520.93s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 07:03:24] [ERROR   ] discord.client: Attempting a reconnect in 402.77s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 07:11:06] [ERROR   ] discord.client: Attempting a reconnect in 489.72s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 07:20:16] [ERROR   ] discord.client: Attempting a reconnect in 986.78s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 07:37:43] [ERROR   ] discord.client: Attempting a reconnect in 980.50s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 07:55:04] [ERROR   ] discord.client: Attempting a reconnect in 184.93s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 07:59:09] [ERROR   ] discord.client: Attempting a reconnect in 1016.21s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 08:17:05] [ERROR   ] discord.client: Attempting a reconnect in 49.06s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 08:18:54] [ERROR   ] discord.client: Attempting a reconnect in 241.73s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 08:23:56] [ERROR   ] discord.client: Attempting a reconnect in 320.08s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 08:30:16] [ERROR   ] discord.client: Attempting a reconnect in 893.58s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 08:46:10] [ERROR   ] discord.client: Attempting a reconnect in 773.04s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 09:00:03] [ERROR   ] discord.client: Attempting a reconnect in 296.97s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 09:06:00] [ERROR   ] discord.client: Attempting a reconnect in 825.05s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 09:20:45] [ERROR   ] discord.client: Attempting a reconnect in 272.93s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 09:26:18] [ERROR   ] discord.client: Attempting a reconnect in 846.43s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 09:41:25] [ERROR   ] discord.client: Attempting a reconnect in 152.53s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 09:44:57] [ERROR   ] discord.client: Attempting a reconnect in 783.50s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 09:59:01] [ERROR   ] discord.client: Attempting a reconnect in 673.32s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 10:11:14] [ERROR   ] discord.client: Attempting a reconnect in 743.91s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 10:24:38] [ERROR   ] discord.client: Attempting a reconnect in 614.60s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 10:35:53] [ERROR   ] discord.client: Attempting a reconnect in 334.01s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 10:42:27] [ERROR   ] discord.client: Attempting a reconnect in 455.17s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 10:51:03] [ERROR   ] discord.client: Attempting a reconnect in 202.63s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 10:54:26] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+[2023-02-24 10:55:27] [ERROR   ] discord.client: Attempting a reconnect in 872.20s
+Traceback (most recent call last):
+  File "/home/nlpuser/.local/lib/python3.8/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.8/asyncio/tasks.py", line 501, in wait_for
+    raise exceptions.TimeoutError()
+asyncio.exceptions.TimeoutError
+[2023-02-24 11:09:59] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+[2023-02-24 11:10:05] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 58f398fcfeb624d0940e82432686443c).
+[2023-02-24 12:19:38] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-24 14:14:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-24 16:37:29] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-24 18:04:35] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-24 19:21:47] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-24 23:00:26] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 01:29:42] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 01:52:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 02:30:06] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 03:30:27] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 04:56:14] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 08:24:04] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 10:52:58] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 12:56:12] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 13:17:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 16:46:10] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 20:05:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-25 23:07:40] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 02:10:55] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 02:51:18] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 03:32:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 04:45:41] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 08:11:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 09:04:43] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 11:29:30] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 12:41:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 14:06:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 18:00:50] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-26 21:05:26] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 00:16:48] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 03:15:57] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 04:28:14] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 05:26:48] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 05:49:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 08:29:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 11:51:40] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 14:56:23] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 15:35:53] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 16:39:49] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 18:46:52] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 20:12:04] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-27 23:34:24] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 00:25:45] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 00:53:03] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 01:13:19] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 01:31:53] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 04:29:56] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 08:08:34] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 09:36:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 11:13:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 11:45:00] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 12:39:12] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 14:58:50] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 16:26:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 18:16:57] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 21:09:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-02-28 22:01:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 00:24:43] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 02:06:10] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 06:05:11] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 08:23:02] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 08:51:11] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 11:05:57] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 11:52:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 13:05:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 14:40:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 16:23:41] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 17:13:32] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 17:42:53] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 20:06:27] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 23:14:10] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 23:14:14] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-01 23:42:52] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 00:07:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 03:47:43] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 06:04:52] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 09:38:06] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 10:07:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 12:17:09] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 13:45:13] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 16:09:43] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 17:14:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 20:34:50] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 21:23:22] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-02 23:15:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 00:18:03] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 01:11:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 01:22:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 05:03:51] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 08:21:36] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 09:36:36] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 12:46:04] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 14:24:29] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 17:48:44] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 18:33:10] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 21:50:06] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-03 21:56:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 00:31:59] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 03:10:24] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 06:30:57] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 07:30:48] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 07:47:23] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 10:09:41] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 12:11:10] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 12:36:12] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 14:58:30] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 18:27:24] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 21:10:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 22:06:32] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-04 22:22:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 00:42:26] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 03:17:09] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 05:35:02] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 09:31:06] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 10:05:46] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 13:45:51] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 16:28:42] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 17:02:47] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 18:59:32] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 20:04:58] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 21:31:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-05 22:47:20] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+[2023-03-06 01:24:33] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 58f398fcfeb624d0940e82432686443c.
+  File "bot.py", line 42
+    await message.channel.send(t))
+                                 ^
+SyntaxError: unmatched ')'
