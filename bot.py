@@ -16,7 +16,7 @@ client = discord.Client(intents=intents)
 async def on_ready():
     guild = discord.utils.get(client.guilds, name='A Cidade dos Robôs')
     channel = discord.utils.get(guild.text_channels, name='bot-fest')
-    await channel.send('O bot está online!')
+    #await channel.send('O bot está online!')
 
 
 
