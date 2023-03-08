@@ -17,27 +17,25 @@ def command_decoder(text):
     terms = re.findall('\w+', text)
 
     if terms[0] != 'run':
-        return("Incorrect command, please try !help to read available commands")
+        return([0, "Incorrect command, please try !help to read available commands"])
 
     
-    match = re.search(r"!run anime: (\S+)", text)
+    # match = re.search(r"!run anime: (\S+)", text)
 
-    if match:
-        anime_name = match.group(1)
-        print(anime_name)
-        return request_maker('anime', anime_name)
+    # if match:
+    #     anime_name = match.group(1)
+    #     return request_maker('anime', anime_name)
 
 
-    match = re.search(r"!run season: (\S+), year: (\d{4})", text)
+    match = re.search(r"!run season: (\w+), year: (\d{4})", text)
     if match:
         season = match.group(1)
         year = match.group(2)
         data = (season, year)
-        print(f"Season: {season}, Year: {year}")
         return request_maker('season', data)
 
     else:
-        return("There was a issue with the command, please make sure you tiped everything correctly")
+        return([0, "There was a issue with the command, please make sure you tiped everything correctly"])
 
 
 
@@ -103,11 +101,6 @@ def request_maker(request, data):
         for i in range(len(anime_data['data'])):
             titles.append(anime_data['data'][i]['node']['title'])
 
-        
-
-        # for title in anime_data[0]["node"]["title"]:
-        #     titles.append(title)
-
-        return titles
+        return [1, titles]
 
 

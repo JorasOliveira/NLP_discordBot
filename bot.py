@@ -2,6 +2,7 @@ from dcToken import apiToken
 import discord
 from mal_api import command_decoder
 import re
+from time import sleep
 
 #client = discord.Client()
 
@@ -40,9 +41,14 @@ async def on_message(message):
     
     else: 
         text = command_decoder(message.content.lower())
-        await message.channel.send("os animes da temporada sao:")
-        for t in text:
-            await message.channel.send(t)
+       
+
+        if text[0] == 1:
+            await message.channel.send("os animes da temporada sao:")
+            for t in text[1]:
+                sleep(2)
+                await message.channel.send(t)
+        else: await message.channel.send(text[1])
 
 
 
