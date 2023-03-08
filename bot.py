@@ -36,7 +36,7 @@ async def on_message(message):
             await message.channel.send('Meu autor eh o Jorás, o email dele eh: jorascco@al.insper.edu.br')
 
     if message.content.lower() == '!help':
-            await message.channel.send("Use '!run season: XXXX, year: NNNN' para saber os animes que lancaram na temporada e no ano expecificado, as temporadas sao divididas em: FALL, WINTER, SUMMER, SPRING. e use 4 digitos para o ano.")
+            await message.channel.send("Use '!run season: XXXX,year: NNNN' para saber os animes que lancaram na temporada e no ano expecificado, as temporadas sao divididas em: FALL, WINTER, SUMMER, SPRING. e use 4 digitos para o ano.")
             await message.channel.send('Todos os dados sao extraidos do My Anime List, https://myanimelist.net/')
     
     else: 
@@ -48,8 +48,8 @@ async def on_message(message):
             for t in text[1]:
                 sleep(2)
                 await message.channel.send(t)
-                
-        else: await message.channel.send(text[1])
+
+        else: await message.channel.send("There was a issue with the command, please make sure you tiped everything correctly"])
 
 
 

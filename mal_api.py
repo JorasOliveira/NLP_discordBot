@@ -27,7 +27,7 @@ def command_decoder(text):
     #     return request_maker('anime', anime_name)
 
 
-    match = re.search(r"!run year:\s*([a-zA-Z]+)\s*season:\s*(\d{4})", text, re.IGNORECASE)
+    match = re.search(r"!run season:\s*([a-zA-Z]+)\s*year:\s*(\d{4})", text, re.IGNORECASE)
     if match:
         season = match.group(1)
         year = match.group(2)
@@ -35,7 +35,7 @@ def command_decoder(text):
         return request_maker('season', data)
 
     else:
-        return([0, "There was a issue with the command, please make sure you tiped everything correctly"])
+        return([0,0])
 
 
 
