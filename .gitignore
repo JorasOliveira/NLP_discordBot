@@ -4,6 +4,7 @@
 
 #sensitive stuff
 dcToken.py
+nohup.out
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

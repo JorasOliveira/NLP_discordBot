@@ -48,6 +48,7 @@ async def on_message(message):
             for t in text[1]:
                 sleep(2)
                 await message.channel.send(t)
+                
         else: await message.channel.send(text[1])
 
 
