@@ -11,6 +11,7 @@ intents.members = True
 
 client = discord.Client(intents=intents)
 
+error_message = "Incorrect command, please try !help to read available commands"
 
 @client.event
 async def on_ready():
@@ -38,18 +39,25 @@ async def on_message(message):
     if message.content.lower() == '!help':
             await message.channel.send("Use '!run season: XXXX,year: NNNN' para saber os animes que lancaram na temporada e no ano expecificado, as temporadas sao divididas em: FALL, WINTER, SUMMER, SPRING. e use 4 digitos para o ano.")
             await message.channel.send('Todos os dados sao extraidos do My Anime List, https://myanimelist.net/')
+            await message.channel.send("Use '!source para saber aonde esta o meu codigo fonte." )
+            await message.channel.send("Use '!auhtor para saber o nome e email do meu autor")
     
     else: 
-        text = command_decoder(message.content.lower())
-       
 
-        if text[0] == 1:
+        terms = re.findall('\w+', message.content.lower())
+            
+        if (terms[0] != 'run') or len(terms) <= 1:
+            await message.channel.send(error_message)
+    
+        text = command_decoder(message.content.lower())
+
+        if text:
             await message.channel.send("os animes da temporada sao:")
             for t in text[1]:
                 sleep(2)
                 await message.channel.send(t)
 
-        else: await message.channel.send("There was a issue with the command, please make sure you tiped everything correctly"])
+        #else: await message.channel.send("There was a issue with the command, please make sure you tiped everything correctly")
 
 
 

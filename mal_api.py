@@ -14,73 +14,35 @@ season = "summer"
 
 def command_decoder(text):
 
+
+    print(text)
+    
     terms = re.findall('\w+', text)
 
     if terms[0] != 'run':
-        return([0, "Incorrect command, please try !help to read available commands"])
+        return(0)
 
-    
-    # match = re.search(r"!run anime: (\S+)", text)
-
-    # if match:
-    #     anime_name = match.group(1)
-    #     return request_maker('anime', anime_name)
-
-
-    match = re.search(r"!run season:\s*([a-zA-Z]+)\s*year:\s*(\d{4})", text, re.IGNORECASE)
+    match = re.search(r"!run season:\s*([a-zA-Z]+)\s*,\s*year:\s*(\d{4})", text, re.IGNORECASE)
+    print(match)
     if match:
+        print(1)
         season = match.group(1)
         year = match.group(2)
         data = (season, year)
+        
         return request_maker('season', data)
 
     else:
-        return([0,0])
+        return(False)
 
 
 
 
 def request_maker(request, data):
 
-
-
-    # if request == 'anime':
-    #     anime_title = data
-    
-    #     # Make a request to the MyAnimeList API to search for the anime
-    #     header = {
-    #         "X-MAL-CLIENT-ID":  CLIENT_ID
-    #     }
-    #     params = {
-    #         "q": anime_title
-    #     }
-
-    #     anime_search_response = requests.get("https://api.myanimelist.net/v2/anime", headers=header, params=params)
-
-    #     # Get the ID of the first anime in the search results
-    #     anime_data = anime_search_response.json()['data']
-    #     if len(anime_data) == 0:
-    #         print(f"No results found for anime: {anime_title}")
-    #     else:
-    #         anime_id = anime_data[0]["node"]["id"]
-
-    #         # Use the ID to make a request for the anime information
-    #         anime_response = requests.get(f"https://api.myanimelist.net/v2/anime/{anime_id}", headers=header)
-
-    #         # Print the anime information
-    #         anime_info = anime_response.json()
-            
-    #         print(f"Title: {anime_info['title']}")
-    #         print(f"Synopsis: {anime_info['synopsis']}")
-    #         print(f"Start Date: {anime_info['start_date']}")
-    #         print(f"End Date: {anime_info['end_date']}")
-    #         return anime_info
-
-
-
-
-
+    print(2)
     if request == 'season':
+        print(3)
         # Make a request to the MyAnimeList API to get the access token
         headers = {
             "X-MAL-CLIENT-ID":  CLIENT_ID
@@ -101,6 +63,6 @@ def request_maker(request, data):
         for i in range(len(anime_data['data'])):
             titles.append(anime_data['data'][i]['node']['title'])
 
-        return [1, titles]
+        return [True, titles]
 
 
