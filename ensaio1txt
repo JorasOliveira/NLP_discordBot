@@ -1,2 +1,5 @@
 Esta entrea foi mais demorada que eu esperava, a ponto que atrasei ela, tive muito mais dificuldade na hora de ultilizar a api no my anime lsit por conta de autenticacao
-o chat gpt nao foi muito util neste quisito, mas ajudou muito a criar esqueletos de codigo funcionais, e com a criacao de regex tambem
+o chat gpt nao foi muito util neste quisito, mas ajudou muito a criar esqueletos de codigo funcionais, e com a criacao de regex tambem.
+Caso de uso: uma pessoa gosta de ver animes e quer poder consultar quais animes lancaram em cada temporada, de cada ano, de forma rapida e pratica dentro do discord!
+isto pode acontecer para rapidamente resolver discussoes, para decidir qual anime a pessoa gostaria de ver, para lembrar quais animes sairam em uma certa temporada, ou para lembrar se um anime expecifico saiu em
+certa temporada.
