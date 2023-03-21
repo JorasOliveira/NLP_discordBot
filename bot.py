@@ -2,7 +2,7 @@ from dcToken import apiToken
 import discord
 from mal_api import command_decoder
 import re
-from time import sleep
+from crawler import crawl
 
 #client = discord.Client()
 
@@ -45,6 +45,9 @@ async def on_message(message):
     else: 
 
         terms = re.findall('\w+', message.content.lower())
+
+        if (terms[0] == 'crawl'):
+            crawl(message.content)
             
         if (terms[0] != 'run') or len(terms) <= 1:
             await message.channel.send(error_message)
