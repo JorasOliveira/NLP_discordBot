@@ -46,19 +46,21 @@ async def on_message(message):
 
         terms = re.findall('\w+', message.content.lower())
 
-        if (terms[0] == 'crawl'):
-            crawl(message.content)
-            
-        if (terms[0] != 'run') or len(terms) <= 1:
-            await message.channel.send(error_message)
-    
-        text = command_decoder(message.content.lower())
+        if terms:
+            if (terms[0] == 'crawl'):
+                await message.channel.send("crawling")
+                crawl((message.content, 0))
+                
+            elif (terms[0] != 'run') or len(terms) <= 1:
+                await message.channel.send(error_message)
+        
+            text = command_decoder(message.content.lower())
 
-        if text:
-            await message.channel.send("os animes da temporada sao:")
-            for t in text[1]:
-                sleep(2)
-                await message.channel.send(t)
+            if text:
+                await message.channel.send("os animes da temporada sao:")
+                for t in text[1]:
+                    sleep(2)
+                    await message.channel.send(t)
 
         #else: await message.channel.send("There was a issue with the command, please make sure you tiped everything correctly")
 
