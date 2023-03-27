@@ -19,15 +19,9 @@ from sklearn.utils.extmath import cartesian
 import IPython
 import re
 #TODO - tirar os prints dps de td estiver pronto
-#TODO - testar bastante e debugar 
 
-#variavel global, contador de quantos arquivos foram salvos
-files = 0
-
-def crawl(command, max_files = 50): #recebe o commando do chatbot, pega a url, faz a sopa com a panela, dai adiciona a sopa no final do csv, faz isso para todos os links encontrados ate o contador estourar
-
-    if files >= max_files:
-        return
+def crawl(command, max_files = 20): #recebe o commando do chatbot, pega a url, faz a sopa com a panela, dai adiciona a sopa no final do csv, faz isso para todos os links encontrados ate o contador estourar
+    files = 0
 
     print(command[0])
     print(command[1])
@@ -47,38 +41,38 @@ def crawl(command, max_files = 50): #recebe o commando do chatbot, pega a url, f
 
     #Aqui poderia ser um try-catch, ou talvez alguma outra solucao mais elegante que checa antes se o link comeca com "https:://" ou sei la oque
     #porem eu nao estou com tempo suficiente para fazer algo bonito, entao temos isso, que resolve o problema.
-    if ( (title is 0) or (body is 0) or (links is 0) ):
+    if ( (title == 0) or (body == 0) or (links == 0) ):
         print("erro para pegar informacoes do site!")
 
     else:
         #exrtaindo os conteudos dos links recursivamente:
 
         print(files)
-        if files >= max_files:
-            return
+        append_csv(url, title, body)
 
-        else:
+        #extraindo os links
+        for link in links:
+            # Check if the URL already exists in the CSV file
 
-            append_csv(url, title, body)
-            
-
-            #extraindo os links
-            for link in links:
-                # Check if the URL already exists in the CSV file
-
-                if os.path.isfile(f'crawler_data.csv'):
-                    existing_df = pd.read_csv('crawler_data.csv')
-                    if link in existing_df['url'].values:
-                        continue
-                    
+            if os.path.isfile(f'crawler_data.csv'):
+                existing_df = pd.read_csv('crawler_data.csv')
+                if link in existing_df['url'].values:
+                    continue
+                
+                else:
+                    title, body, more_links = soup_pot(link)
+                    if ( (title == 0) or (body == 0) or (links == 0) ):
+                        print("erro para pegar informacoes do site!")
+                        
                     else:
-                        title, body, more_links = soup_pot(link)
                         links =  links + more_links
 
                         if files >= max_files:
                             return
-
+                        print(f'adding: {link}, {title}, {body}' )
+                        print(f'files downloaded: {files}')
                         append_csv(link, title, body)
+                        files += 1
 
 
 def soup_pot(url): #funcao que faz a sopa e retorna o prato feito
@@ -111,4 +105,3 @@ def append_csv(url, title, body): #adiciona no final do csv o conteudo, incremen
     # Save the DataFrame to a CSV file
     with open('crawler_data.csv', mode='a', newline='') as file:
         df.to_csv(file, header=not file.tell(), index=False)
-        files += 1

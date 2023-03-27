@@ -3,6 +3,9 @@ import discord
 from mal_api import command_decoder
 import re
 from crawler import crawl
+from search import tfidf_search
+from search import wn_search
+from search import train
 
 #client = discord.Client()
 
@@ -51,7 +54,23 @@ async def on_message(message):
             if (terms[0] == 'crawl'):
                 await message.channel.send("crawling")
                 crawl((message.content, 0))
-                
+                await message.channel.send("Recomendo rodar o comando !train para me re-treinar com os novos dados")
+
+            elif (terms[0] == 'search'):
+                await message.channel.send("searching")
+                result =  tfidf_search(message.content)
+                await message.channel.send(result)
+
+            elif (terms[0] == 'wn_search'):
+                await message.channel.send("searching with wordnet")
+                result =  wn_search(message.content)
+                await message.channel.send(result)
+            
+            elif (terms[0] == 'train'):
+                await message.channel.send("aprendendo!, infelizmente nao vou conseguir conversar com voce ate eu terminar de aprender, isto deve demorar poucos minutos, agradeco a paciencia!")
+                train()
+                await message.channel.send("aprendi!, posso voltar a conversar")
+  
             elif (terms[0] != 'run') or len(terms) <= 1:
                 await message.channel.send(error_message)
         
@@ -62,7 +81,6 @@ async def on_message(message):
                 for t in text[1]:
                     await message.channel.send(t)
 
-        #else: await message.channel.send("There was a issue with the command, please make sure you tiped everything correctly")
 
 
 
