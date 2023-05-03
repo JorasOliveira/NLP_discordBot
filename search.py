@@ -63,10 +63,12 @@ def train(index = index):
             if tfidf[j, vectorizer.vocabulary_[w]] > 0:
                 index[w][j] = tfidf[j, vectorizer.vocabulary_[w]]
 
+
 def tfidf_search(command):
     match = re.match(r"!search (.+)", command)
 
     term = match.group(1)
+    
     #aqui usamos tudo acima para pegar o documento com maior tf-idf, com indice invertido
     result = query(term, 1, index)
     print(result)
