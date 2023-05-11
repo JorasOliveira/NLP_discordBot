@@ -116,7 +116,8 @@ def append_csv(url, title, body): #adiciona no final do csv o conteudo, incremen
     with open('crawler_data.csv', mode='a', newline='') as file:
         df.to_csv(file, header=not file.tell(), index=False)
 
-
+ ###############################################################################################################
+ 
 def bad_word_trainer():
 
     #TODO - continuar alterando para funcionar do jeito certo

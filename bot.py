@@ -73,7 +73,7 @@ async def on_message(message):
                 train()
                 await message.channel.send("aprendi!, posso voltar a conversar")
 
-            elif (terms[0] != 'run') or (terms[0] != 'author') or (terms[0] != 'source') or len(terms) <= 1:
+            elif (terms[0] != 'run') or (terms[0] != 'author') or (terms[0] != 'source') or len(terms) < 1:
                 await message.channel.send(error_message)
         
             text = command_decoder(message.content.lower())
