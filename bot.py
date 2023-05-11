@@ -45,9 +45,11 @@ async def on_message(message):
             await message.channel.send('Todos os dados sao extraidos do My Anime List, https://myanimelist.net/')
             await message.channel.send("Use '!source para saber aonde esta o meu codigo fonte." )
             await message.channel.send("Use '!auhtor para saber o nome e email do meu autor")
-    
-    else: 
-
+            await message.channel.send("Use '!crawl para eu apredner novos dados, isto pode demorar alguns minutos")
+            await message.channel.send("Use '!train para eu re-treinar com os novos dados, isto pode demorar alguns minutos")
+            await message.channel.send("Use '!search' para eu procurar um termo na minha base de dados")  
+            await message.channel.send("Use '!wn_search' para eu procurar um termo na minha base de dados, usando a wordnet")  
+    else:
         terms = re.findall('\w+', message.content.lower())
 
         if terms:
@@ -70,8 +72,8 @@ async def on_message(message):
                 await message.channel.send("aprendendo!, infelizmente nao vou conseguir conversar com voce ate eu terminar de aprender, isto deve demorar poucos minutos, agradeco a paciencia!")
                 train()
                 await message.channel.send("aprendi!, posso voltar a conversar")
-  
-            elif (terms[0] != 'run') or len(terms) <= 1:
+
+            elif (terms[0] != 'run') or (terms[0] != 'author') or (terms[0] != 'source') or len(terms) <= 1:
                 await message.channel.send(error_message)
         
             text = command_decoder(message.content.lower())
