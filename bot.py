@@ -6,6 +6,7 @@ from crawler import crawl
 from search import tfidf_search
 from search import wn_search
 from search import train
+from search import content_generator
 
 #client = discord.Client()
 
@@ -61,13 +62,19 @@ async def on_message(message):
             elif (terms[0] == 'search'):
                 await message.channel.send("searching")
                 result =  tfidf_search(message.content)
-                await message.channel.send(result)
+                await message.channel.send(result[0])
+            
 
             elif (terms[0] == 'wn_search'):
                 await message.channel.send("searching with wordnet")
                 result =  wn_search(message.content)
-                await message.channel.send(result)
+                await message.channel.send(result[0])
             
+            elif (terms[0] == 'generate'):
+                await message.channel.send("generating:")
+                result =  content_generator(message.content)
+                await message.channel.send(result)
+                
             elif (terms[0] == 'train'):
                 await message.channel.send("aprendendo!, infelizmente nao vou conseguir conversar com voce ate eu terminar de aprender, isto deve demorar poucos minutos, agradeco a paciencia!")
                 train()
