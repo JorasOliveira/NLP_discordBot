@@ -9,6 +9,12 @@ import random
 import tensorflow as tf
 from keras.models import load_model
 
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
 from keras.layers import Input, Dense, Activation, TimeDistributed, Softmax, TextVectorization, Reshape, RepeatVector, Conv1D, Bidirectional, AveragePooling1D, UpSampling1D, Embedding, Concatenate, GlobalAveragePooling1D, LSTM, Multiply
 from keras.models import Model
 import tensorflow as tf
@@ -74,19 +80,33 @@ def train(index = index):
 
 
 def tfidf_search(command):
-    match = re.match(r"!search (.+)", command)
 
-    term = match.group(1)
+    pattern = r"!search (.+)(?:\sth=(\d+(\.\d+)?))?"
+    match = re.match(pattern, command)
+    print(match)
+
+    if match:
+        term = match.group(1)
+        threshold = match.group(2)
+            
+        if threshold is not None:
+            threshold = float(threshold)
+
     
     #aqui usamos tudo acima para pegar o documento com maior tf-idf, com indice invertido
     result = query(term, 1, index)
-    print(result)
+    # print(result)
 
     if result:
-        print(result[0][1])
+        # print(result[0][1])
         url = df.loc[result[0][1]].url
         content = df.loc[result[0][1]].body
-        print(url)
+
+        if threshold is not None:
+            th = content_filter(content)
+            if th > threshold:
+                return "resultado acima do threshold especificado :("
+            
         return (url, content)
     
     return "Nao Encontrado"
@@ -95,10 +115,18 @@ def tfidf_search(command):
 def wn_search(command):
     url = 'none'
     max_value = 0
-    
-    match = re.match(r"!wn_search (.+)", command)
 
-    term = match.group(1)
+    pattern = r"!wn_search (.+)(?:\sth=(\d+(\.\d+)?))?"
+    match = re.match(pattern, command)
+    print(match)
+
+    if match:
+        term = match.group(1)
+        threshold = match.group(2)
+            
+        if threshold is not None:
+            threshold = float(threshold)
+
 
     synsets = wordnet.synsets(term, lang='por')
     print([syn for syn in synsets])
@@ -107,7 +135,7 @@ def wn_search(command):
 
     #aqui usamos tudo acima para pegar o documento com maior tf-idf, com indice invertido
     result = query(term, 1, index)
-    print(result)
+    # print(result)
 
     if result:
         url = df.loc[result[0][1]].url
@@ -127,112 +155,54 @@ def wn_search(command):
 
 
     if url != 'none':
-        print(url)
+        if threshold is not None:
+
+            th = content_filter(content)
+
+            if th > threshold:
+                return "resultado acima do threshold especificado :("
+            
         return (url, content)
     
     return "Nao Encontrado"
 
 
+def content_filter(content):
+
+    bad_words = 'datasets/bad_words.csv'
+    good_words = 'datasets/words_pos.csv'
+
+    bad_words = pd.read_csv(bad_words)
+    good_words = pd.read_csv(good_words)
 
 
+    good_words = good_words.drop(columns=['pos_tag'])
+    good_words['IsBad'] = 0
+    bad_words['IsBad'] = 1
 
-#### APS 4 - geracao de conteudo ####
+    good_words_sample = good_words.sample(1618, random_state=42)
 
+    words = pd.concat([good_words_sample, bad_words])
 
-def predict_word(seq_len, latent_dim, vocab_size):
-    input_layer = Input(shape=(seq_len-1,))
-    x = input_layer
-    x = Embedding(vocab_size, latent_dim, name='embedding', mask_zero=True)(x)
-    x = LSTM(latent_dim, kernel_initializer='glorot_uniform')(x)
-    latent_rep = x
-    x = Dense(vocab_size)(x)
-    x = Softmax()(x)
-    return Model(input_layer, x), Model(input_layer, latent_rep)
+    X = words["word"]
+    y = words["IsBad"]
 
-vocab_size = 5000
+    X_train, X_test, y_train, y_test = train_test_split(X, y ,test_size=0.2, random_state=42)
 
-def beam_search_predizer(entrada, numero_de_predicoes, modelo, vectorize_layer, t, beam_size):
-    frase = entrada
-    contexto = frase  # Contexto deslizante
-    for n in range(numero_de_predicoes):
-        if n == 0:
-            pred = modelo.predict(vectorize_layer([contexto])[:, :-1])
-            pred = pred * t
-
-            # Select top candidates from the initial predictions
-            top_tokens = np.argsort(pred[0, -1, :])[-beam_size:]
-        else:
-            new_candidates = []
-            for token in top_tokens:
-                new_context = contexto + " " + vectorize_layer.get_vocabulary()[token]
-                pred = modelo.predict(vectorize_layer([new_context])[:, :-1])
-                pred = pred * t
-                new_candidates.append((token, pred[0, -1, token]))
-
-            # Select top candidates from all the expanded predictions
-            new_candidates = sorted(new_candidates, key=lambda x: x[1], reverse=True)
-            top_tokens = [candidate[0] for candidate in new_candidates[:beam_size]]
-
-        # Randomly select a token from the top candidates
-        rand_token = random.choice(top_tokens)
-        word = vectorize_layer.get_vocabulary()[rand_token]
-
-        frase = frase + " " + word
-        contexto = contexto + " " + word
-        contexto = ' '.join(contexto.split()[1:])
-        print(word)
-
-    return frase
-
-
-def content_generator(command):
+    classificador = Pipeline([
+                        ('meu_vetorizador', CountVectorizer(stop_words='english')),
+                        ('meu_classificador', LogisticRegression(penalty=None, solver='saga', max_iter=10000))
+                        ])
     
-    match = re.match(r"!generate (.+)", command)
+    classificador.fit(X_train,y_train)
+    y_pred = classificador.predict(X_test)
+    acc = accuracy_score(y_pred,y_test)
+    print(acc)
 
-    term = match.group(1)
+    prob = classificador.predict_log_proba([content])
+    probas = classificador.predict_proba(X_train)
 
-    texto =  tfidf_search("!search " + term)
-    
-    if texto == "Nao Encontrado":
-        texto = wn_search("!wn_search " + term)
-
-    texto = texto[1]
-
-    # Ensure that texto is a list of strings
-    if isinstance(texto, str):
-        texto = [texto]
-    elif isinstance(texto, tuple):
-        texto = list(texto)
-
-    print(texto)   
-
-    predictor, latent = predict_word(10, 15, vocab_size)
-    predictor.summary()
-    #opt = keras.optimizers.SGD(learning_rate=1, momentum=0.9)
-    opt = keras.optimizers.Nadam(learning_rate=0.1)
-    loss_fn = keras.losses.SparseCategoricalCrossentropy(
-        ignore_class=1,
-        name="sparse_categorical_crossentropy",
-    )
-
-    
-    predictor.compile(loss=loss_fn, optimizer=opt, metrics=["accuracy"])
-
-    vectorize_layer = TextVectorization(max_tokens=vocab_size, output_sequence_length=10)
-
-    vectorize_layer.adapt(texto)
-
-    pred = predictor.predict(vectorize_layer([texto])[:,:-1])
-    idx = tf.argmax(pred, axis=1)[0]
-    idx = idx.numpy() - 1
-    print(idx)
-    vectorize_layer = vectorize_layer.get_vocabulary()[idx]
-
-    num_predictions = 10
-    temperature = 0.1
-    beam_size = 5
-
-    # Generate predictions using beam search
-    output_text = beam_search_predizer(texto, num_predictions, pred, vectorize_layer, temperature, beam_size)
-
-    return output_text
+    m = np.max(probas)
+    prob = 2 * (m - prob) / (2 * m) - 1
+    print(prob[0][1])
+    return prob[0][1]

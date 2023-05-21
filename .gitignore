@@ -2,6 +2,11 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
 
+#custom
+datasets/
+# testing.ipynb
+
+
 #sensitive stuff
 dcToken.py
 nohup.out
