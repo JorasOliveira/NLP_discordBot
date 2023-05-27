@@ -46,10 +46,15 @@ def buscar(palavras, indice):
     for p in palavras:
         if p in indice.keys():
             for documento in indice[p].keys():
+                print("documento:")
+                print(documento)
                 if documento not in resultado.keys():
                     resultado[documento] = indice[p][documento]
                 else:
                     resultado[documento] += indice[p][documento]
+                
+                print("resultado:")
+                print(resultado)
     return resultado
 
 #2 
@@ -66,6 +71,8 @@ def n_relevantes(result_busca, n):
 def query(q_str, n, index):
 
     words = re.findall('\w+', q_str)
+    print("words:")
+    print(words)
     res = buscar(words, index)
     res_n = n_relevantes(res, n)
     return res_n
@@ -81,21 +88,29 @@ def train(index = index):
 
 def tfidf_search(command):
 
-    pattern = r"!search (.+)(?:\sth=(\d+(\.\d+)?))?"
-    match = re.match(pattern, command)
-    print(match)
+    pattern = r"!search (.+)(?:\sth=(?:\d+(\.\d+))?)?"
+    pattern2 = r"(.+)(?:\s)"
+    pattern3 = r".*?th=(\d+(\.\d+)?)"
 
-    if match:
-        term = match.group(1)
-        threshold = match.group(2)
-            
+
+    groups = re.match(pattern, command)
+    if groups:
+
+        term = re.match(pattern2 , groups.group(1))
+        if term is not None:
+            term = term.group(1)
+            print("term:")
+            print(term)
+
+        threshold  = re.match(pattern3, groups.group(1))
         if threshold is not None:
+            threshold = threshold.group(1)
             threshold = float(threshold)
-
     
     #aqui usamos tudo acima para pegar o documento com maior tf-idf, com indice invertido
     result = query(term, 1, index)
-    # print(result)
+    print("result:")
+    print(result)
 
     if result:
         # print(result[0][1])
@@ -104,8 +119,12 @@ def tfidf_search(command):
 
         if threshold is not None:
             th = content_filter(content)
-            if th > threshold:
-                return "resultado acima do threshold especificado :("
+            print("th:")
+            print(th)
+            print("threshold:")
+            print(threshold)
+            if th < threshold:
+                return "resultado abaixo do threshold especificado :("
             
         return (url, content)
     
@@ -116,17 +135,22 @@ def wn_search(command):
     url = 'none'
     max_value = 0
 
-    pattern = r"!wn_search (.+)(?:\sth=(\d+(\.\d+)?))?"
-    match = re.match(pattern, command)
-    print(match)
+    pattern = r"!search (.+)(?:\sth=(?:\d+(\.\d+))?)?"
+    pattern2 = r"(.+)(?:\s)"
+    pattern3 = r".*?th=(\d+(\.\d+)?)"
 
-    if match:
-        term = match.group(1)
-        threshold = match.group(2)
-            
+
+    groups= re.match(pattern, command)
+    if groups():
+
+        term = re.match(pattern2 , groups.group(1))
+        if term is not None:
+            term = term.group(1)
+
+        threshold  = re.match(pattern3, groups.group(1))
         if threshold is not None:
+            threshold = threshold.group(1)
             threshold = float(threshold)
-
 
     synsets = wordnet.synsets(term, lang='por')
     print([syn for syn in synsets])
@@ -159,7 +183,7 @@ def wn_search(command):
 
             th = content_filter(content)
 
-            if th > threshold:
+            if th < threshold:
                 return "resultado acima do threshold especificado :("
             
         return (url, content)
@@ -200,9 +224,33 @@ def content_filter(content):
     print(acc)
 
     prob = classificador.predict_log_proba([content])
-    probas = classificador.predict_proba(X_train)
+    probas = classificador.predict_proba([content])
+    print("prob:")
+    print(prob)
+
+    if prob[0][1] >= 1:
+        return 1
+    elif prob[0][1] <= -1:
+        return -1
+    
 
     m = np.max(probas)
-    prob = 2 * (m - prob) / (2 * m) - 1
-    print(prob[0][1])
-    return prob[0][1]
+    print("m:")
+    print(m)
+    prob = 2 * (m -prob[0][1]) / (2 * m) - 1
+    print("prob:")
+    print(prob)
+
+
+
+    # if prob[0]>= 1:
+    #     return 1
+    # elif prob[0][1] <= -1:
+    #     return -1
+    
+    # print("prob:")
+    # print(prob)
+
+
+
+    return prob #[0][1]

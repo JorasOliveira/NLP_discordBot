@@ -1,0 +1,3 @@
+A aps foi mais complicada que eu esperava, primeiro consegui uma base de dados apenas de palavras "ruins" (https://www.kaggle.com/datasets/nicapotato/bad-bad-words)
+complementei com um arquivo que sao todas as palavras da lingua inglesa, para poder fazer a regressao logistica para classificar, fiz uma regressao por ser mais simples
+e ultilizar menos recursos do computador, porem a accuracia ficou baixa, depois disso tive varias complicacoes para adaptar as funcoes de busca para ter o threshold.
