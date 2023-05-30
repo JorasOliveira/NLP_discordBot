@@ -6,7 +6,7 @@ from crawler import crawl
 from search import tfidf_search
 from search import wn_search
 from search import train
-# from generator import content_generator
+from generator import content_generator
 
 #client = discord.Client()
 
