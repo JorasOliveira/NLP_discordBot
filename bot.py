@@ -3,10 +3,8 @@ import discord
 from mal_api import command_decoder
 import re
 from crawler import crawl
-from search import tfidf_search
-from search import wn_search
-from search import train
-from generator import content_generator
+from search import tfidf_search, wn_search, train
+from generator import content_generator, gpt2_generate
 
 #client = discord.Client()
 
@@ -50,6 +48,9 @@ async def on_message(message):
             await message.channel.send("Use '!train para eu re-treinar com os novos dados, isto pode demorar alguns minutos")
             await message.channel.send("Use '!search' para eu procurar um termo na minha base de dados")  
             await message.channel.send("Use '!wn_search' para eu procurar um termo na minha base de dados, usando a wordnet")  
+            await message.channel.send("Use '!search th=XX' para eu procurar um termo na minha base de dados, e filtrar por conteudo inadequado, onde XX eh um numero entre 0 e 1, quanto mais proximo de 1, mais restrito sera o filtro")  
+            await message.channel.send("Use '!wn_search' para eu procurar um termo na minha base de dados, usando a wordnet e filtrar por conteudo inadequado, onde XX eh um numero entre 0 e 1, quanto mais proximo de 1, mais restrito sera o filtro")
+            await message.channel.send("Use !gpt2_generate para eu gerar um texto usando o gpt2, o command sera a promt para o texto gerado")  
     else:
         terms = re.findall('\w+', message.content.lower())
 
@@ -74,7 +75,11 @@ async def on_message(message):
                 await message.channel.send("generating:")
                 result =  content_generator(message.content)
                 await message.channel.send(result)
-                
+            
+            elif (terms[0] == 'gpt2_generate'):
+                await message.channel.send("generating with gpt2:")
+                result =  gpt2_generate(message.content)
+                await message.channel.send(result)
             elif (terms[0] == 'train'):
                 await message.channel.send("aprendendo!, infelizmente nao vou conseguir conversar com voce ate eu terminar de aprender, isto deve demorar poucos minutos, agradeco a paciencia!")
                 train()

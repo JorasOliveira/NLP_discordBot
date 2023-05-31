@@ -12,7 +12,7 @@ from tqdm import tqdm
 
 from keras.layers import Input, TextVectorization
 from keras.models import Model
-
+from transformers import pipeline, set_seed
 
 DATASET = 'crawler_data.csv'
 df = pd.read_csv(DATASET)
@@ -97,7 +97,19 @@ def content_generator(command):
 
     match = re.match(r"!generate:(.+)", command)
     content = match.group(1)
-    print(content)
 
     return beam_search_predizer(content, 15, predictor, vectorize_layer, beam_size=20)
     
+
+def gpt2_generate(command):
+    match = re.match(r"!gpt2_generate:(.+)", command)
+    content = match.group(1)
+
+    generator = pipeline('text-generation', model='gpt2')
+    set_seed(42)
+    gpt_output = generator(content, max_length=120, num_return_sequences=1)
+
+    generated_text = gpt_output[0]['generated_text']  # Access the generated text from the output
+
+    return generated_text
+

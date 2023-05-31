@@ -1,0 +1,2 @@
+A aps 5 foi mais facil que eu esperava, estava receoso de colocar o cartao de credito na openAi e esquecer de cancelar,
+entao preferi carregar diretamente o gpt2 da hugging face, e foi bem simples de implementar, o chat gpt me ajudou umpouco par faze o codigo tambem.
