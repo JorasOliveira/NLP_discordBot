@@ -95,14 +95,14 @@ history = predictor.fit(ds.map(separar_ultimo_token), epochs=20, verbose=1)
 
 def content_generator(command):
 
-    match = re.match(r"!generate:(.+)", command)
+    match = re.match(r"!generate (.+)", command)
     content = match.group(1)
 
     return beam_search_predizer(content, 15, predictor, vectorize_layer, beam_size=20)
     
 
 def gpt2_generate(command):
-    match = re.match(r"!gpt2_generate:(.+)", command)
+    match = re.match(r"!gpt2_generate (.+)", command)
     content = match.group(1)
 
     generator = pipeline('text-generation', model='gpt2')

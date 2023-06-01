@@ -46,15 +46,11 @@ def buscar(palavras, indice):
     for p in palavras:
         if p in indice.keys():
             for documento in indice[p].keys():
-                print("documento:")
-                print(documento)
                 if documento not in resultado.keys():
                     resultado[documento] = indice[p][documento]
                 else:
                     resultado[documento] += indice[p][documento]
                 
-                print("resultado:")
-                print(resultado)
     return resultado
 
 #2 
@@ -71,8 +67,6 @@ def n_relevantes(result_busca, n):
 def query(q_str, n, index):
 
     words = re.findall('\w+', q_str)
-    print("words:")
-    print(words)
     res = buscar(words, index)
     res_n = n_relevantes(res, n)
     return res_n
@@ -99,8 +93,6 @@ def tfidf_search(command):
         term = re.match(pattern2 , groups.group(1))
         if term is not None:
             term = term.group(1)
-            print("term:")
-            print(term)
 
         threshold  = re.match(pattern3, groups.group(1))
         if threshold is not None:
@@ -119,10 +111,6 @@ def tfidf_search(command):
 
         if threshold is not None:
             th = content_filter(content)
-            print("th:")
-            print(th)
-            print("threshold:")
-            print(threshold)
             if th < threshold:
                 return "resultado abaixo do threshold especificado :("
             
@@ -135,7 +123,7 @@ def wn_search(command):
     url = 'none'
     max_value = 0
 
-    pattern = r"!search (.+)(?:\sth=(?:\d+(\.\d+))?)?"
+    pattern = r"!wn_search (.+)(?:\sth=(?:\d+(\.\d+))?)?"
     pattern2 = r"(.+)(?:\s)"
     pattern3 = r".*?th=(\d+(\.\d+)?)"
 
@@ -221,12 +209,9 @@ def content_filter(content):
     classificador.fit(X_train,y_train)
     y_pred = classificador.predict(X_test)
     acc = accuracy_score(y_pred,y_test)
-    print(acc)
 
     prob = classificador.predict_log_proba([content])
     probas = classificador.predict_proba([content])
-    print("prob:")
-    print(prob)
 
     if prob[0][1] >= 1:
         return 1
@@ -235,22 +220,6 @@ def content_filter(content):
     
 
     m = np.max(probas)
-    print("m:")
-    print(m)
     prob = 2 * (m -prob[0][1]) / (2 * m) - 1
-    print("prob:")
-    print(prob)
-
-
-
-    # if prob[0]>= 1:
-    #     return 1
-    # elif prob[0][1] <= -1:
-    #     return -1
-    
-    # print("prob:")
-    # print(prob)
-
-
 
     return prob #[0][1]
