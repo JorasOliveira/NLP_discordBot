@@ -80,105 +80,6 @@ def train(index = index):
                 index[w][j] = tfidf[j, vectorizer.vocabulary_[w]]
 
 
-def tfidf_search(command):
-
-    pattern = r"!search (.+)(?:\sth=(?:\d+(\.\d+))?)?"
-    pattern2 = r"(.+)(?:\s)"
-    pattern3 = r".*?th=(\d+(\.\d+)?)"
-
-
-    groups = re.match(pattern, command)
-    if groups:
-
-        term = re.match(pattern2 , groups.group(1))
-        if term is not None:
-            term = term.group(1)
-
-        threshold  = re.match(pattern3, groups.group(1))
-        if threshold is not None:
-            threshold = threshold.group(1)
-            threshold = float(threshold)
-    
-    #aqui usamos tudo acima para pegar o documento com maior tf-idf, com indice invertido
-    result = query(term, 1, index)
-    print("result:")
-    print(result)
-
-    if result:
-        # print(result[0][1])
-        url = df.loc[result[0][1]].url
-        content = df.loc[result[0][1]].body
-
-        if threshold is not None:
-            th = content_filter(content)
-            if th < threshold:
-                return "resultado abaixo do threshold especificado :("
-            
-        return (url, content)
-    
-    return "Nao Encontrado"
-
-
-def wn_search(command):
-    url = 'none'
-    max_value = 0
-
-    pattern = r"!wn_search (.+)(?:\sth=(?:\d+(\.\d+))?)?"
-    pattern2 = r"(.+)(?:\s)"
-    pattern3 = r".*?th=(\d+(\.\d+)?)"
-
-
-    groups= re.match(pattern, command)
-    if groups():
-
-        term = re.match(pattern2 , groups.group(1))
-        if term is not None:
-            term = term.group(1)
-
-        threshold  = re.match(pattern3, groups.group(1))
-        if threshold is not None:
-            threshold = threshold.group(1)
-            threshold = float(threshold)
-
-    synsets = wordnet.synsets(term, lang='por')
-    print([syn for syn in synsets])
-    print([syn.name() for syn in synsets])
-    print([syn.definition() for syn in synsets])
-
-    #aqui usamos tudo acima para pegar o documento com maior tf-idf, com indice invertido
-    result = query(term, 1, index)
-    # print(result)
-
-    if result:
-        url = df.loc[result[0][1]].url
-        max_value = result[0][0]
-   
-    for syn in synsets:
-
-        definition = syn.definition()
-        result = query(definition, 1, index)
-
-        if result:
-            value = result[0][0]
-
-            if value > max_value:
-                url = df.loc[result[0][1]].url
-                content = df.loc[result[0][1]].body
-
-
-    if url != 'none':
-        if threshold is not None:
-
-            th = content_filter(content)
-
-            if th < threshold:
-                return "resultado acima do threshold especificado :("
-            
-        return (url, content)
-    
-    return "Nao Encontrado"
-
-
 def content_filter(content):
 
     bad_words = 'datasets/bad_words.csv'
@@ -223,3 +124,114 @@ def content_filter(content):
     prob = 2 * (m -prob[0][1]) / (2 * m) - 1
 
     return prob #[0][1]
+
+
+def tfidf_search(command):
+    pattern = r"!search (.+)"
+    pattern2 = r"th=(\d+(\.\d+)?)"
+
+    term = ""
+    threshold = None
+
+    groups = re.match(pattern, command)
+    
+    if groups:
+        term = groups.group(1)
+
+        threshold_match = re.search(pattern2, command)
+
+        if threshold_match:
+            threshold = float(threshold_match.group(1))
+
+
+    print("Term:", term)
+    if threshold is not None:
+        print("Threshold:", threshold)
+
+    
+    #aqui usamos tudo acima para pegar o documento com maior tf-idf, com indice invertido
+    result = query(term, 1, index)
+    print("result:")
+    print(result)
+
+    if result:
+        # print(result[0][1])
+        url = df.loc[result[0][1]].url
+        content = df.loc[result[0][1]].body
+
+        if threshold is not None:
+            th = content_filter(content)
+            if th < threshold:
+                return "resultado abaixo do threshold especificado :("
+            
+        return (url, content)
+    
+    return "Nao Encontrado"
+
+
+def wn_search(command):
+    url = 'none'
+    max_value = 0
+
+    pattern = r"!wn_search (.+)"
+    pattern2 = r"th=(\d+(\.\d+)?)"
+
+    term = ""
+    threshold = None
+    content = ""
+
+    groups = re.match(pattern, command)
+    if groups:
+        term = groups.group(1)
+
+        threshold_match = re.search(pattern2, command)
+        if threshold_match:
+            threshold = float(threshold_match.group(1))
+
+    print("Term:", term)
+    if threshold is not None:
+        print("Threshold:", threshold)
+
+    # if threshold is not None:
+    #     threshold = threshold.group(1)
+    #     threshold = float(threshold)
+
+    synsets = wordnet.synsets(term, lang='por')
+    print([syn for syn in synsets])
+    print([syn.name() for syn in synsets])
+    print([syn.definition() for syn in synsets])
+
+    #aqui usamos tudo acima para pegar o documento com maior tf-idf, com indice invertido
+    result = query(term, 1, index)
+    # print(result)
+
+    if result:
+        url = df.loc[result[0][1]].url
+        max_value = result[0][0]
+   
+    for syn in synsets:
+
+        definition = syn.definition()
+        result = query(definition, 1, index)
+
+        if result:
+            value = result[0][0]
+
+            if value > max_value:
+                url = df.loc[result[0][1]].url
+                content = df.loc[result[0][1]].body
+
+
+    if url != 'none':
+        if threshold is not None:
+
+            th = content_filter(content)
+
+            if th < threshold:
+                return "resultado acima do threshold especificado :("
+            
+        return (url, content)
+    
+    return "Nao Encontrado"
+
+
