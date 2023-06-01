@@ -3,7 +3,6 @@
 
 
 #custom
-datasets/
 # testing.ipynb
 testing.ipynb
 
@@ -182,6 +181,5 @@ poetry.toml
 .ruff_cache/
 
 #others
-datasets/
 
 # End of https://www.toptal.com/developers/gitignore/api/python
